@@ -180,7 +180,7 @@ const Navbar = ({favourites, toggleFavorite}) => {
                 <Link to="/contact">Contact</Link>
                 <IconButton sx={{
                     color: "white",
-                    fontSize: "12px",
+                    fontSize: "20px",
                     padding: "10px 10px",
                     '&:hover': {
                         color: 'grey',
@@ -204,7 +204,7 @@ const Navbar = ({favourites, toggleFavorite}) => {
 
                 <IconButton sx={{
                     color: "white",
-                    fontSize: "12px",
+                    fontSize: "20px",
                     padding: "10px 10px",
                     '&:hover': {
                         color: 'grey',
@@ -212,7 +212,7 @@ const Navbar = ({favourites, toggleFavorite}) => {
 
                 }} onClick={handleFavoritesClick} color="inherit">
                     Favourites
-                    <StarIcon sx={{fontSize: "14px"}}/>
+                    <StarIcon sx={{fontSize: "14px", marginLeft: "10px"}}/>
                 </IconButton>
                 <Menu
                     id="favorite-menu"

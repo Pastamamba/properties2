@@ -3,6 +3,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import useSlideInFromLeft from "../hooks/useSlideInFromLeft.js";
+import Typography from "@mui/material/Typography";
 
 // Define initial state outside of the component for clarity and reusability
 const initialContactInfo = {
@@ -35,10 +36,16 @@ export const ContactForm = () => {
     // Render the contact form
     return (
         <div ref={slideRef}>
-            <Box display="flex" justifyContent="center" alignItems="center" height="10vh">
-                <h2>Contact</h2>
-            </Box>
-            <Box display="flex" justifyContent="center" alignItems="center" height="60vh">
+            <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" sx={{ height: "70vh" }}>
+                <Typography sx={{
+                    fontFamily: "'Dancing Script', cursive",
+                    fontSize: "40px",
+                    marginBottom: "30px",
+                    fontWeight: "200px"
+                }}>
+                    Contact us
+                </Typography>
+
                 <Box
                     component="form"
                     onSubmit={handleSubmit}
@@ -46,11 +53,10 @@ export const ContactForm = () => {
                     sx={{
                         display: 'flex',
                         flexDirection: 'column',
-                        width: 400,
-                        boxShadow: 3, // Adds shadow to the form for better UI
+                        boxShadow: 2,
+                        borderRadius: "0.5em",
                         p: 4,
-                        borderRadius: '0.5em', // Rounds the corners of the form
-                        backgroundColor: 'background.paper', // Sets the background color
+                        width: "80%"
                     }}
                 >
                     {/* Name input field */}

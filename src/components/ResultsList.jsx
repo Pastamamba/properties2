@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
     List,
@@ -21,6 +20,13 @@ const ResultsList = ({ properties, favourites, toggleFavorite }) => {
         return favourites.includes(propertyId) ? <StarIcon color="secondary" /> : <StarOutlineIcon />;
     };
 
+    const typographyStyle = {
+        fontFamily: "'OpenSans-SemiBold', serif",
+        fontSize: "15px",
+        letterSpacing: "1px",
+        padding: "0.1em"
+    }
+
     return (
         <List component="nav" aria-label="search results">
             <Grid container spacing={2} wrap="wrap">
@@ -37,21 +43,29 @@ const ResultsList = ({ properties, favourites, toggleFavorite }) => {
                             display: 'flex',
                             flexWrap: 'wrap',
                             marginBottom: '10px',
-                            minHeight: "380px",
-                            borderRadius: "0.5em"
+                            borderRadius: "0.5em",
                         }}>
                             <img
-                                alt={`Image of ${property.type}`}
+                                alt={`${property.id}`}
                                 src={property.imgs[0]}
-                                style={{ width: '100%', maxWidth: '250px', height: 'auto', borderRadius: '8px', flexShrink: 1 }}
+                                style={{
+                                    width: '100%',
+                                    height: 'auto',
+                                    maxHeight: "350px",
+                                    borderRadius: '8px',
+                                    flexShrink: 1,
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                    display: "flex"
+                            }}
                             />
-                            <div style={{ padding: '0 20px', flexGrow: 1 }}>
-                                <Typography variant="subtitle1">{property.type}</Typography>
-                                <Typography variant="body2">{property.location}</Typography>
-                                <Typography variant="h6" style={{ color: 'green', fontWeight: 'bold' }}>
+                            <div style={{ marginLeft: "10px", flexGrow: 1 }}>
+                                <Typography sx={typographyStyle} variant="subtitle1">{property.type}</Typography>
+                                <Typography sx={typographyStyle}  variant="body2">{property.location}</Typography>
+                                <Typography sx={typographyStyle}  variant="h6" style={{ color: 'green', fontWeight: 'bold' }}>
                                     {property.price} €
                                 </Typography>
-                                <Typography variant="body2" style={{ color: 'green' }}>
+                                <Typography sx={typographyStyle}  variant="body2" style={{ color: 'green' }}>
                                     Price
                                 </Typography>
                             </div>

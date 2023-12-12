@@ -1,3 +1,7 @@
+* {
+    font-family: 'OpenSans-SemiBold', serif;
+}
+
 .card-content {
     font-size: .75em;
     margin: 0.2em 0 0;

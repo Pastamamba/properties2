@@ -9,10 +9,13 @@ import "../styles/propertydetail.css";
 import {OneImageCarousel} from "../components/OneImageCarousel.jsx";
 import Typography from "@mui/material/Typography";
 import PropertyDetailInfo from "../components/PropertyDetailInfo.jsx";
+import useSlideInFromLeft from "../hooks/useSlideInFromLeft.js";
 
 const PropertyDetail = () => {
     // Get the 'propertyId' from the URL parameters.
     const {propertyId} = useParams();
+
+    const slideRef = useSlideInFromLeft();
 
     // Define state variables for the property details and the active image index.
     const [property, setProperty] = useState(null);
@@ -82,7 +85,7 @@ const PropertyDetail = () => {
     };
 
     return (
-        <div style={{marginTop: "30px"}}>
+        <div style={{marginTop: "30px"}} ref={slideRef}>
             <div style={{
                 fontFamily: "OpenSans-SemiBold",
                 fontStyle: "normal",
@@ -146,9 +149,15 @@ const PropertyDetail = () => {
             {/* Display property details, including type, rooms, description, and location image. */}
             <div className={'property-detail-div'}>
                 <div className={'location-div'}>
-                    <img style={{
-                        maxWidth: "500px",
-                    }} src={property.locationImg} alt={"location-img"}/>
+                    <img
+                        loading="lazy"
+                        style={{
+                            width: "100%",
+                            maxWidth: "500px",
+                        }}
+                        src={property.locationImg}
+                        alt={"location-img"}
+                    />
                 </div>
             </div>
         </div>

@@ -2,6 +2,7 @@ import {useState} from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
+import useSlideInFromLeft from "../hooks/useSlideInFromLeft.js";
 
 // Define initial state outside of the component for clarity and reusability
 const initialContactInfo = {
@@ -14,6 +15,7 @@ const initialContactInfo = {
 export const ContactForm = () => {
     // State for managing the contact info
     const [contactInfo, setContactInfo] = useState(initialContactInfo);
+    const slideRef = useSlideInFromLeft();
 
     // Handle change in text fields and update state accordingly
     const handleChange = (e) => {
@@ -32,7 +34,7 @@ export const ContactForm = () => {
 
     // Render the contact form
     return (
-        <>
+        <div ref={slideRef}>
             <Box display="flex" justifyContent="center" alignItems="center" height="10vh">
                 <h2>Contact</h2>
             </Box>
@@ -146,6 +148,6 @@ export const ContactForm = () => {
                     </Button>
                 </Box>
             </Box>
-        </>
+        </div>
     );
 };

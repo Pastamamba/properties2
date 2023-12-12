@@ -24,56 +24,52 @@
     {
       "id": "prop2",
       "type": "Flat",
-      "bedrooms": 2,
-      "bathrooms": 3,
-      "price": 20000,
-      "tenure": "Freehold",
-      "description": "Modern two-bedroom apartment in the bustling area of Shoreditch. Features an open-plan living space, stylish interior, and close proximity to trendy bars and restaurants.",
-      "location": "Shoreditch, London E1",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "price": 325000,
+      "tenure": "Leasehold",
+      "description": "Spacious three-bedroom flat in Islington, featuring a modern kitchen, a large living area, and a balcony. Ideal location for commuting and nightlife.",
+      "location": "Islington, London N1",
       "picture": "/properties/prop2/0.png",
       "locationImg": "/properties/prop2/location.png",
       "imgs": [
         "/properties/prop2/0.png",
         "/properties/prop2/1.png",
         "/properties/prop2/2.png",
-        "/properties/prop2/3.png",
-        "/properties/prop2/4.png",
-        "/properties/prop2/5.png",
-        "/properties/prop2/6.png"
+        "/properties/prop2/3.png"
       ],
-      "postcodeArea": "E1",
-      "added": {"month": "September", "day": 14, "year": 2023}
+      "postcodeArea": "N1",
+      "added": {"month": "July", "day": 20, "year": 2023}
     },
     {
       "id": "prop3",
       "type": "Flat",
-      "bedrooms": 2,
+      "bedrooms": 4,
       "bathrooms": 3,
-      "price": 35000,
-      "tenure": "Freehold",
-      "description": "Chic two-bedroom flat located in the heart of Camden. Perfect for those who enjoy vibrant city living, with easy access to local markets, music venues, and eclectic dining.",
-      "location": "Camden, London NW1",
+      "price": 525000,
+      "tenure": "Leasehold",
+      "description": "Luxurious four-bedroom flat in Canary Wharf, boasting stunning river views, a contemporary design, and state-of-the-art amenities. Close to financial hubs and shopping centres.",
+      "location": "Canary Wharf, London E14",
       "picture": "/properties/prop3/0.png",
       "locationImg": "/properties/prop3/location.png",
       "imgs": [
         "/properties/prop3/0.png",
-        "/properties/prop1/1.png",
-        "/properties/prop1/2.png",
-        "/properties/prop1/3.png",
-        "/properties/prop1/4.png"
+        "/properties/prop3/1.png",
+        "/properties/prop3/2.png",
+        "/properties/prop3/3.png"
       ],
-      "postcodeArea": "NW1",
-      "added": {"month": "September", "day": 14, "year": 2023}
+      "postcodeArea": "E14",
+      "added": {"month": "August", "day": 8, "year": 2023}
     },
     {
       "id": "prop4",
       "type": "Flat",
-      "bedrooms": 2,
-      "bathrooms": 3,
-      "price": 399995,
-      "tenure": "Freehold",
-      "description": "Elegant two-bedroom flat in Kensington. Offers luxurious living with a contemporary design, a balcony with views, and is located near world-renowned shops and museums.",
-      "location": "Kensington, London W8",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "price": 420000,
+      "tenure": "Leasehold",
+      "description": "Spacious three-bedroom flat in Chelsea. Features modern decor, ample natural light, and a private terrace. Close to shops, cafes, and the Thames.",
+      "location": "Chelsea, London SW3",
       "picture": "/properties/prop4/0.png",
       "locationImg": "/properties/prop4/location.png",
       "imgs": [
@@ -83,18 +79,18 @@
         "/properties/prop4/3.png",
         "/properties/prop4/4.png"
       ],
-      "postcodeArea": "W8",
-      "added": {"month": "September", "day": 14, "year": 2023}
+      "postcodeArea": "SW3",
+      "added": {"month": "July", "day": 18, "year": 2023}
     },
     {
       "id": "prop5",
       "type": "Flat",
-      "bedrooms": 2,
-      "bathrooms": 3,
-      "price": 399995,
-      "tenure": "Freehold",
-      "description": "Contemporary two-bedroom flat in the heart of Notting Hill. Features a sleek design, natural light, and is just steps away from famous markets and colorful townhouses.",
-      "location": "Notting Hill, London W11",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "price": 350000,
+      "tenure": "Leasehold",
+      "description": "Modern one-bedroom flat in Shoreditch. Boasts a minimalist style, floor-to-ceiling windows, and a prime location near vibrant nightlife and tech startups.",
+      "location": "Shoreditch, London E1",
       "picture": "/properties/prop5/0.png",
       "locationImg": "/properties/prop5/location.png",
       "imgs": [
@@ -104,15 +100,15 @@
         "/properties/prop5/3.png",
         "/properties/prop5/4.png"
       ],
-      "postcodeArea": "W11",
-      "added": {"month": "September", "day": 30, "year": 2022}
+      "postcodeArea": "E1",
+      "added": {"month": "June", "day": 22, "year": 2022}
     },
     {
       "id": "prop6",
       "type": "House",
-      "bedrooms": 3,
-      "bathrooms": 3,
-      "price": 750000,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "price": 830000,
       "picture": "/properties/prop6/0.png",
       "imgs": [
         "/properties/prop6/0.png",
@@ -121,22 +117,22 @@
         "/properties/prop6/3.png",
         "/properties/prop6/4.png"
       ],
-      "tenure": "Freehold",
-      "description": "Classic Victorian three-bedroom house in Richmond. Offers spacious rooms, a beautiful garden, and is close to the Thames, parks, and historic sites.",
-      "location": "Richmond, London TW10",
+      "tenure": "Leasehold",
+      "description": "Modern four-bedroom house in Kingston upon Thames. Featuring large living spaces, a state-of-the-art kitchen, and a landscaped garden.",
+      "location": "Kingston Thames, London KT2",
       "locationImg": "/properties/prop6/location.png",
-      "postcodeArea": "TW10",
-      "added": {"month": "August", "day": 21, "year": 2023}
+      "postcodeArea": "KT2",
+      "added": {"month": "September", "day": 15, "year": 2023}
     },
     {
       "id": "prop7",
       "type": "House",
-      "bedrooms": 2,
-      "bathrooms": 3,
-      "price": 750000,
-      "tenure": "Freehold",
-      "description": "Cozy two-bedroom cottage in Hampstead. Features charming details, a fireplace, and a lovely garden. Nestled in a quiet neighborhood, yet close to the city center.",
-      "location": "Hampstead, London NW3",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "price": 680000,
+      "tenure": "Leasehold",
+      "description": "Stylish three-bedroom townhouse in Camden. Boasts an open-plan living area, roof terrace, and contemporary finishes. Ideal for city living.",
+      "location": "Camden, London NW1",
       "locationImg": "/properties/prop7/location.png",
       "imgs": [
         "/properties/prop7/0.png",
@@ -146,8 +142,8 @@
         "/properties/prop7/4.png"
       ],
       "picture": "/properties/prop7/0.png",
-      "postcodeArea": "NW3",
-      "added": {"month": "October", "day": 12, "year": 2022}
+      "postcodeArea": "NW1",
+      "added": {"month": "November", "day": 5, "year": 2022}
     }
   ]
 }

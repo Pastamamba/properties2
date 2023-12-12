@@ -4,11 +4,13 @@ import ResultsList from '../components/ResultsList.jsx';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import "../styles/home.css";
-
+import useSlideInFromLeft from "../hooks/useSlideInFromLeft.js";
 
 const Home = ({favourites, toggleFavorite}) => {
     const [properties, setProperties] = useState([]);
     const [filteredProperties, setFilteredProperties] = useState([]);
+    const slideRef = useSlideInFromLeft();
+
 
     // Function to convert a date object to milliseconds
     const convertDateToMillis = (dateObj) => {
@@ -93,7 +95,7 @@ const Home = ({favourites, toggleFavorite}) => {
 
     return (
         <>
-            <Box sx={{
+            <Box ref={slideRef} sx={{
                 width: "100%",
                 display: "flex",
                 justifyContent: "center",
@@ -111,7 +113,15 @@ const Home = ({favourites, toggleFavorite}) => {
             <SearchForm onSearch={handleSearch}/>
 
             {/* Display search results count */}
-            <Typography variant="h6" style={{margin: '20px 0'}}>
+            <Typography variant="h6" sx={
+                {
+                    margin: '20px 0',
+                    fontFamily: "'OpenSans-SemiBold', serif",
+                    fontWeight: 600,
+                    justifyContent: "center",
+                    alignItems: "center",
+                    display: "flex"
+                }}>
                 Search Results: {filteredProperties.length}
             </Typography>
 

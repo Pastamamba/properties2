@@ -1,4 +1,4 @@
-import {useState} from 'react'; // Import the 'useState' hook from React
+import {useEffect, useRef, useState} from 'react'; // Import the 'useState' hook from React
 import TextField from '@mui/material/TextField'; // Import a text input field from Material-UI
 import Button from '@mui/material/Button'; // Import a button from Material-UI
 import InputAdornment from '@mui/material/InputAdornment'; // Import an input adornment from Material-UI
@@ -10,11 +10,14 @@ import {useLocation, useNavigate} from "react-router-dom"; // Import hooks for h
 import dayjs from 'dayjs'; // Import the Day.js library for date manipulation
 import Typography from "@mui/material/Typography"; // Import a typography component from Material-UI
 import {Grid} from "@mui/material"; // Import a grid component from Material-UI
+import { gsap } from 'gsap';
 
 // Define a functional component called 'SearchForm' that takes a 'onSearch' prop
 export const SearchForm = ({onSearch}) => {
     const navigate = useNavigate(); // Get the 'navigate' function from React Router
     const location = useLocation(); // Get the current location from React Router
+
+    const formRef = useRef(null);
 
     // Function to clear a field by setting it to an empty string
     const clearField = (setter) => {
@@ -57,6 +60,23 @@ export const SearchForm = ({onSearch}) => {
 
     const [isFilterVisible, setIsFilterVisible] = useState(false); // Initialize a state variable for filter visibility
 
+    useEffect(() => {
+        if (isFilterVisible) {
+            gsap.from(formRef.current, {
+                height: 0,
+                duration: 0.5,
+                ease: "power3.out"
+            });
+        } else if (formRef.current) {
+            gsap.to(formRef.current, {
+                height: 0,
+                duration: 0.5,
+                ease: "power3.in",
+                onComplete: () => formRef.current.style.height = ''
+            });
+        }
+    }, [isFilterVisible]);
+
     // Function to handle form submission
     const handleSubmit = (event) => {
         event.preventDefault(); // Prevent the default form submission behavior
@@ -83,7 +103,7 @@ export const SearchForm = ({onSearch}) => {
     const divStyle = !isFilterVisible ? {
         justifyContent: "center",
         alignItems: "center",
-        width: "100%",
+        width: "95%",
         padding: "1em",
         display: "flex",
     } : {}
@@ -91,7 +111,7 @@ export const SearchForm = ({onSearch}) => {
     return (
         <div style={divStyle}>
             {isFilterVisible && ( // Display the filter form when 'isFilterVisible' is true
-                <form onSubmit={handleSubmit} style={{
+                <form ref={formRef} onSubmit={handleSubmit} style={{
                     justifyContent: "center",
                     alignItems: "center",
                     display: "flex",
@@ -325,6 +345,12 @@ export const SearchForm = ({onSearch}) => {
                     </Grid>
                 </form>
             )}
+            <div style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+            }}>
             <Button
                 variant="outlined"
                 onClick={() => setIsFilterVisible(!isFilterVisible)}
@@ -340,6 +366,7 @@ export const SearchForm = ({onSearch}) => {
             >
                 {isFilterVisible ? 'Hide Filter' : 'Filter'}
             </Button>
+            </div>
         </div>
     );
 };
